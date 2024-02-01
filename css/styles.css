@@ -26,7 +26,8 @@ header> .container {
     display: flex;
 }    
 .container {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
     padding: 0 16px 0 16px;
     align-items: center;
@@ -161,7 +162,7 @@ h1 {
     background-color: #404BBF;
 }
 .section-strategy {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 .hh-strategy  {
     color: #2E2F42;
@@ -180,10 +181,11 @@ h1 {
  }
 .list-strategy {
     display: flex;
+    flex-direction: column;
     gap: 24px;
 }
 .list-item-strategy {
-    flex-basis: calc((100% - 3*24px) / 4);
+    /* flex-basis: calc((100% - 3*24px) / 4); */
 }
 .icons-container {
     display: flex;
@@ -193,26 +195,33 @@ h1 {
     background-color: #f4f4fd;
     border-radius: 4px;
     margin-bottom: 8px;
+    border: 1px solid #8E8F99;
+    display: none;
 }
 
 .h-strategy {
     color: #2E2F42;
-    font-size: 20px;
-    font-weight: 500;
+    /* font-size: 20px; */
+    font-size: 36px;
+    /* font-weight: 500; */
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
+    text-align: center;
 }
 .p-strategy {
     color: #434455;
     font-size: 16px;
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 72px;
 }
 .section-tree {
     background-color: #F4F4FD;
-    padding: 120px 0;
+    padding: 96px 0;
 }
 .hour-team {
     color: #2E2F42;
@@ -226,15 +235,20 @@ h1 {
 }
 .list-our-team {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
+    
 }
 .mark-team {
     background-color: #FFFFFF;
-    flex-basis: calc((100% - 3*24px) / 4);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
+    margin-bottom: 72px;
+}
+.mark-team img {
+    width: 100%;
 }
 .mark-div {
     padding: 32px 0;
@@ -308,14 +322,7 @@ h1 {
 }
 .portfolio-list-item {
     /* width: calc((100% - 48px)/3); */
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-        width: 288px;
-        height: 400px;
-        padding-bottom: 32px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
+    width: 288px;
 }
 .portfolio-list-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -346,18 +353,9 @@ h1 {
 .portfolio-app {
     /* border: 1px solid #e7e9fc; */
     /* padding: 32px 226px 8px 16px; */
-    text-wrap: nowrap;
-    display: flex;
-    padding: 0px 16px;
-    height: ;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 8px;
-    align-self: stretch;
+    padding: 32px 16px;
     border: 1px solid #F4F4FD;
     border-top: none;
-    background: #FFF;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .portfolio-subtitle {
@@ -496,7 +494,7 @@ h1 {
 }
 ul, ol {
     list-style: none;
-    display: flex;
+    /* display: flex; */
     padding: 0;
     margin: 0;
 }
@@ -707,3 +705,71 @@ img {
     margin-right: auto;
     margin-left: auto;
 }
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 736px;
+    }
+    .our-portfolio {
+        padding-bottom: 96px;
+    }
+    .portfolio-list-item {
+        width: calc((100% - 24px)/2);
+    }
+    .section-tree> .container {
+        max-width: 552px;
+    }
+    .mark-team {
+        width: calc((100% - 24px)/2);
+    }
+    .list-strategy {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .list-item-strategy {
+        flex-basis: calc((100% - 24px) / 2);
+    }
+    .h-strategy {
+        text-align: initial;
+    }
+}
+
+/*----------------------*/
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1128px;
+    }
+    .our-portfolio {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    .portfolio-list-item {
+        width: calc((100% - 48px)/3);
+    }
+    .section-tree>.container {
+        max-width: unset;
+    }
+    
+    .mark-team {
+        width: calc((100% - 72px)/4);
+    }
+    .section-tree {
+        padding: 120px 0;
+    }
+    .section-strategy {
+        padding: 120px 0;
+    }
+    .list-item-strategy {
+        flex-basis: calc((100% - 3*24px) / 4);
+    }
+    .h-strategy {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .icons-container {
+        display: flex;
+    }
+    .p-strategy {
+        font-weight: 400;
+    }
+}   
