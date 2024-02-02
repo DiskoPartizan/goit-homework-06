@@ -114,28 +114,39 @@ address {
     gap: 40px;
 }
 .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url(../images/people-officejpg.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/Dark-bg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: #2e2f42;
-    padding: 188px 0;
+    /* padding: 188px 0; */
+    padding: 72px 16px;
     max-width: 1440px;
     background-size: cover;
     margin: 0 auto;
-
+}
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/Dark-bg-mob-x2.jpg);
+    }
 }
 h1 {
     color: #ffffff;
     text-align: center;
-    font-size: 56px;
+    /* font-size: 56px; */
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.07;
+    /* line-height: 1.07; */
+    line-height: 1.1;
     letter-spacing: 0.02em;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 72px;
 }
 .for-your-bisnes {
-    max-width: 496px;
+    /* max-width: 496px; */
+    max-width: 216px;
 }
 .button-order {
     background-color: #4D5AE5;
@@ -709,6 +720,26 @@ img {
     .container {
         max-width: 736px;
     }
+    .hero {
+        padding: 112px 136px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/Dark-bg-tab.jpg);
+    }
+        @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 2dppx),
+        (min-resolution: 192dpi) {
+            .hero {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/Dark-bg-tab-2x.jpg);
+            }
+        }
+    .for-your-bisnes {
+        max-width: 496px;
+    }
+    h1 {
+        font-size: 56px;
+        line-height: 1.07;
+    }
     .our-portfolio {
         padding-bottom: 96px;
     }
@@ -739,6 +770,18 @@ img {
     .container {
         max-width: 1128px;
     }
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-officejpg.jpg);
+    }
+        @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 2dppx),
+        (min-resolution: 192dpi) {
+            .hero {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                    url(../images/people-office-2x.jpg);
+            }
+        }
     .our-portfolio {
         padding-top: 120px;
         padding-bottom: 120px;
