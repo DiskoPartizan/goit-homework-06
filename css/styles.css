@@ -50,12 +50,87 @@ header> .container {
     text-transform: uppercase;
     margin-right: 76px;
     align-items: center;
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
     
 }
 .studio {
     color: #2E2F42;
     align-items: center;
 }
+/*****MOB-MENU*****/
+.open-menu-btn {
+
+}
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.close-menu-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.mob-list {
+    margin-bottom: 40px;
+}
+
+.mob-title:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mob-nav {
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+.mob-soc-icon {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.mob-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mob-menuaddres {
+    display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+}
+
+.mob-address-title {
+
+}
+
+.mob-tel {
+
+}
+/****************/
 .nav {
     font-weight: 500;
     line-height: 1.5;
@@ -70,7 +145,7 @@ header> .container {
 
 }
 .menunav{
-    display: flex;
+    display: none;
     gap: 40px;
 }
 .nav::after {
@@ -110,7 +185,7 @@ address {
 }
 .menuaddres {
     color: #434455;
-    display: flex;
+    display: none;
     gap: 40px;
 }
 .hero {
@@ -720,6 +795,16 @@ img {
     .container {
         max-width: 736px;
     }
+    .menunav {
+        display: flex;
+    }
+    .menuaddres {
+        display: flex;
+    }
+    .web {
+        margin-top: 25.5px;
+        margin-bottom: 25.5px;
+    }
     .hero {
         padding: 112px 136px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -770,6 +855,7 @@ img {
     .container {
         max-width: 1128px;
     }
+    
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url(../images/people-officejpg.jpg);
