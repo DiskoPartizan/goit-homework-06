@@ -871,6 +871,7 @@ img {
     }
     .mark-team {
         width: calc((100% - 24px)/2);
+        margin-bottom: 64px;
     }
     .list-strategy {
         flex-direction: row;
